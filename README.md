@@ -19,8 +19,7 @@ The AI Drawing Pad is a web application that allows users to create digital draw
 To get started with the AI Drawing Pad, follow the instructions below:
 
 ### Prerequisites
-- Node.js (version X.X.X or higher)
-- npm (version X.X.X or higher)
+- Node.js (version 6.20.0 or higher)
   
 ### Installation
 - Clone the repository: git clone `https://github.com/kodepirate/Draw-Pad`
