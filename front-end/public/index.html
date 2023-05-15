@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Drawing App</title>
+	<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+	<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+	<div id="root"></div>
+	<script type="text/babel">
+		// Define the App component
+		class App extends React.Component {
+			constructor(props) {
+				super(props);
+				this.canvasRef = React.createRef();
+				this.state = {
+					imageUrl: null,
+					drawing: null,
+					isDrawing: false,
+				};
+			}
+
+			// Handle when the user starts drawing
+			handleMouseDown = (event) => {
+				this.setState({ isDrawing: true });
+				const canvas = this.canvasRef.current;
+				const context = canvas.getContext("2d");
+				context.beginPath();
+				context.moveTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
+			}
+
+			// Handle when the user stops drawing
+			handleMouseUp = (event) => {
+				this.setState({ isDrawing: false });
+			}
+
+			// Handle when the user is drawing
+			handleMouseMove = (event) => {
+				if (!this.state.isDrawing) {
+					return;
+				}
+				const canvas = this.canvasRef.current;
+				const context = canvas.getContext("2d");
+				context.lineTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
+				context.stroke();
+			}
+
+			// Handle when the user clicks the "Submit" button
+			handleSubmit = () => {
+				const canvas = this.canvasRef.current;
+				const image = canvas.toDataURL("image/png");
+				fetch("/predict", {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({ drawing: image }),
+				})
+					.then((response) => response.json())
+					.then((data) => {
+						this.setState({ imageUrl: data.image });
+					})
+					.catch((error) => {
+						console.error(error);
+					});
+			}
+
+			// Render the App component
+			render() {
+				return (
+					<div>
+						<canvas
+							ref={this.canvasRef}
+							width={256}
+							height={256}
+							style={{ border: "1px solid black" }}
+							onMouseDown={this.handleMouseDown}
+							onMouseUp={this.handleMouseUp}
+							onMouseMove={this.handleMouseMove}
+						></canvas>
+						<button onClick={this.handleSubmit}>Submit</button>
+						{this.state.imageUrl && (
+							<img src={this.state.imageUrl} alt="Completed Drawing" />
+						)}
+					</div>
+				);
+			}
+		}
+
+		// Render the App component to the root element
+		ReactDOM.render(<App />, document.getElementById("root"));
+	</script>
+</body>
+</html>
+ -->
