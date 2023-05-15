@@ -42,7 +42,7 @@ We welcome contributions from the community to enhance the AI Drawing Pad. To co
 - Push to the branch: git push origin feature/bug-fix-name
 - Open a pull request on the original repository and provide a detailed description of your changes.
 ## Bugs and Feature Requests
-If you encounter any bugs or have ideas for new features, please open an issue on the GitHub repository. We appreciate your feedback and suggestions!
+If you encounter any bugs or have ideas for new **features,** please open an issue on the GitHub repository. We appreciate your feedback and suggestions and you can contribute to it too!
 
 ## License
 The AI Drawing Pad is open-source software licensed under the MIT License.
