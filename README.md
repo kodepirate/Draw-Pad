@@ -50,7 +50,6 @@ The AI Drawing Pad is open-source software licensed under the MIT License.
 ## Acknowledgments
 We would like to thank the following libraries and resources that made this project possible:
 
-- OpenAI GPT
 - TensorFlow.js
 - Node.js
 - React
