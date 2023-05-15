@@ -23,7 +23,7 @@ To get started with the AI Drawing Pad, follow the instructions below:
 - npm (version X.X.X or higher)
   
 ### Installation
-- Clone the repository: git clone `https://github.com/your-username/Ai-Draw-Pad.git`
+- Clone the repository: git clone `https://github.com/kodepirate/Draw-Pad`
 - Navigate to the backend folder: cd ai-drawing-pad/backend
 - Install the dependencies: npm install
 - Start the server: npm start
@@ -36,7 +36,7 @@ To get started with the AI Drawing Pad, follow the instructions below:
 We welcome contributions from the community to enhance the AI Drawing Pad. To contribute, please follow these steps:
 
 ### 1 Fork the repository on GitHub.
-- Clone your forked repository: git clone https://github.com/your-username/ai-drawing-pad.git
+- Clone your forked repository: git clone https://github.com/kodepirate/Draw-Pad
 - Create a new branch for your feature/bug fix: git checkout -b feature/bug-fix-name
 - Make your modifications and test thoroughly.
 - Commit your changes: git commit -m "Description of your changes"
